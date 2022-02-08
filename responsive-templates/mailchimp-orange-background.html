@@ -2,8 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
-    <!-- This is a simple example template that you can edit to create your own custom templates -->
-
     <!--[if gte mso 15]>
     <xml>
     <o:OfficeDocumentSettings>
@@ -178,7 +176,7 @@
 		#donation-cta {
 			font-size: 40px;
 			line-height: 46px;
-			background-color: white;
+			background-color: inherit;
 		}
 		#donation-cta-text {
 			padding-left: 24px
@@ -231,18 +229,16 @@
 	*/
 	#templateLogoHeader {
 		padding-top:18px;
-		background: white
+		background: inherit
 	}
 	/*
-	@tab Header
-	@section Header Style
+	Header Style
 	*/
 	#templateHeader{
-		background: white
+		background: inherit
 		}
 	/*
-	@tab Header
-	@section Header Text
+	Header Text
 	*/
 		#templateHeader,#templateHeader p{
 			margin-top: 0;
@@ -254,20 +250,25 @@
 	/*
 
 	/*
-	@tab Body
-	@section Body Style
+	Body Style
 	*/
 	#templateBody{
-			/*@editable*/background-color:#FFFFFF;
-			/*@editable*/background-image:none;
-			/*@editable*/background-repeat:no-repeat;
-			/*@editable*/background-position:center;
-			/*@editable*/background-size:cover;
-			/*@editable*/border-top:0;
+			background-color: inherit;
+			background-image:none;
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:cover;
+			border-top:0;
 		}
 	/*
-	@tab Footer
-	@section Footer Style
+	@tab Page
+	@section Email Background Color
+	*/
+	#containerColor {
+		background-color: white;
+	}
+	/*
+	Footer Style
 	*/
 		#templateFooter{
 			background-color:black;
@@ -278,33 +279,19 @@
 			font-size:16px;
 			line-height: 18.4px;
 		}
-	/*
-	Headings
-	*/
 		#templateFooter h2 {
 			font-weight: 400;
 			font-size: 18px;
 			text-transform: uppercase;
 		}
-	/*
-	@tab Footer
-	@section Footer Link
-	*/
 		#templateFooter a, #footerContent p a{
 			color:white;
 			text-decoration:underline;
 		}
-	/*
-	Subscription details
-	*/
 		#subscription-details {
 			font-size: 10px;
 			line-height: 11px;
 		}
-
-
-
-	
 
 	/* Media queries */
 	@media only screen and (max-width: 580px){
@@ -312,7 +299,6 @@
 			-webkit-text-size-adjust:none !important;
 		}
 	}
-	
 	@media only screen and (max-width: 480px){
 		.templateContainer{
   	width:100% !important;
@@ -322,7 +308,6 @@
 		max-width: 418px !important;
 		margin-top: 52px;
 		}
-
 }	@media only screen and (max-width: 480px){
 		body{
 			width:100% !important;
@@ -338,11 +323,6 @@
 		.columnContainer{
 			max-width:100% !important;
 			width:100% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		.mobileHide{
-			display:none;
 		}
 
 }	@media only screen and (max-width: 480px){
@@ -401,7 +381,7 @@
                     <tr>
                     <td align="center" valign="top" width="600" style="width:600px;">
                     <![endif]-->
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer" id="containerColor">
                         <!-- BEGIN HEADER // -->
 												<tr>
 													<td valign="top" id="templateLogoHeader" style="padding-bottom: 100px">
@@ -473,8 +453,8 @@
                                 <!-- BEGIN MODULE: BODY CONTENT // -->
 																<table border="0" cellpadding="0" cellspacing="0" width="100%">
 																<!-- BEGIN WIDE EXHIBITIONS // -->
-																	<!-- BEGIN WIDE EXHIBITION (WHITE) // -->
-																	<tr mc:repeatable="wide_exhibition" mc:variant="white_background" mc:hideable bgcolor="white">
+																	<!-- BEGIN WIDE EXHIBITION (INHERIT) // -->
+																	<tr mc:repeatable="wide_exhibition" mc:variant="inherit_background" mc:hideable>
 																		<td>
 																			<table border="0" cellpadding="0" cellspacing="0" width="100%" class="wide-exhibitions-wrapper" width="100%">
 																				<tr width="100%">
@@ -515,7 +495,7 @@
 																			</table>	
 																		</td>
 																	</tr>
-																	<!-- END WIDE EXHIBITION (WHITE) // -->
+																	<!-- END WIDE EXHIBITION (INHERIT) // -->
 																	<!-- BEGIN WIDE EXHIBITION (GREY) // -->
 																	<tr mc:repeatable="wide_exhibition" mc:variant="grey_background" mc:hideable bgcolor="#F2F2F2">
 																		<td>
@@ -558,7 +538,7 @@
 																			</table>	
 																		</td>
 																	</tr>
-																	<!-- END WIDE EXHIBITION (WHITE) // -->
+																	<!-- END WIDE EXHIBITION (GREY) // -->
 																<!-- END WIDE EXHIBITIONS // -->
 																</table>
 
